@@ -26,5 +26,5 @@ assert get_most_frequent_word('как говорится так и говори�
 def get_most_frequent_word(text):
     if re.match('^[a-zA-Z\s]*$', text):
         result = text.split()
-        return max(result, key=result.count)
+        return max(result, key=result.count) метод count() ищет подстроку в заданной строке и возвращает, сколько раз подстрока присутствует в ней.
 '''
