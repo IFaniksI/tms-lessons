@@ -14,14 +14,13 @@ def get_most_frequent_word(text):
     if re.match('^[a-zA-Z\s]*$', text):
         result = text.split()
         return max(result, key=result.count)
-# метод count() ищет подстроку в заданной строке (списке) и возвращает, сколько раз подстрока присутствует в ней.
 
 
 assert get_most_frequent_word('hello this is a string with words and spaces and big big woooooooooord') != 'woooooooooord'
 assert get_most_frequent_word('hello this is a string with words and spaces and big big woooooooooord and and and') == 'and'
 assert get_most_frequent_word('как говорится так и говорится') == None
 
-''' 
+''' Можно и так
 def get_most_frequent_word(text):
     if re.match('^[a-zA-Z\s]*$', text):
         value_dict = dict.fromkeys(text.split(), 0)
