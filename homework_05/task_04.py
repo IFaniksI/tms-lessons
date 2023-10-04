@@ -14,7 +14,3 @@ assert get_longest_word('В Каннах львы только ленивым в
 assert get_longest_word('1 1234 12345 12 123') == None
 assert get_longest_word('She sells seashells by the seashore') == 'seashells'
 assert get_longest_word('Peter Piper picked a peck of pickled peppers.') == None
-
-
-
-
