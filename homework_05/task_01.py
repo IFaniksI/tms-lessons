@@ -9,11 +9,11 @@ def is_year_leap(year):
     return year % 4 == 0 and (year % 400 == 0 or year % 100 != 0)
 
 
-assert is_year_leap(2020) is True
-assert is_year_leap(2022) is False
-assert is_year_leap(2024) is True
-assert is_year_leap(1600) is True
-assert is_year_leap(2000) is True
-assert is_year_leap(1700) is False
-assert is_year_leap(2300) is False
+assert is_year_leap(2020) == True
+assert is_year_leap(2022) == False
+assert is_year_leap(2024) == True
+assert is_year_leap(1600) == True
+assert is_year_leap(2000) == True
+assert is_year_leap(1700) == False
+assert is_year_leap(2300) == False
 
