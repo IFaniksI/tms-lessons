@@ -4,9 +4,8 @@
 # 12345 -> 1 + 2 + 3 + 4 + 5 = 15
 # 15 -> 1 + 5 = 6
 
-value = input()
+value = input('Введите число: ')
 result = 0
 for i in value:
     result += int(i)
-    print(f'{result} {i}')
 print(result)
