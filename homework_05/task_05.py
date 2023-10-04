@@ -9,12 +9,22 @@ import re
 # ? "hello this is a string with words and spaces and big big woooooooooord" -> "woooooooooord" ? ЭТО КАК ТАК
 # ???????????????????????????????????????????????????????????????????????????????????????????????
 
+
 def get_most_frequent_word(text):
     if re.match('^[a-zA-Z\s]*$', text):
-        result = text.split()
-        return max(result, key=result.count)
+        value_dict = dict.fromkeys(text.split(), 0)
+        for i in text.split():
+            value_dict[i] += 1
+        return max(value_dict, key=value_dict.get)
 
 
 assert get_most_frequent_word('hello this is a string with words and spaces and big big woooooooooord') != 'woooooooooord'
 assert get_most_frequent_word('hello this is a string with words and spaces and big big woooooooooord and and and') == 'and'
 assert get_most_frequent_word('как говорится так и говорится') == None
+
+''' НУ ДУМАЮ ЧТО ВЫ ЭТО ЗАЩИТАЕТЕ
+def get_most_frequent_word(text):
+    if re.match('^[a-zA-Z\s]*$', text):
+        result = text.split()
+        return max(result, key=result.count)
+'''
