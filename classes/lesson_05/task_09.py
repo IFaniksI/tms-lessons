@@ -1,8 +1,9 @@
 # Напишите функцию get_natural_numbers, которое принимает целое число n
 # и возвращает список натуральных чисел от 1 до n включительно. Используйте генераторы списков.
+# * Старайтесь использовать аннотации
 
 
-def get_natural_numbers(n):
+def get_natural_numbers(n: int) -> list[int]:
     return [i for i in range(1, n + 1)]
 
 

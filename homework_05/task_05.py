@@ -21,7 +21,7 @@ assert get_most_frequent_word('hello this is a string with words and spaces and 
 assert get_most_frequent_word('hello this is a string with words and spaces and big big woooooooooord and and and') == 'and'
 assert get_most_frequent_word('как говорится так и говорится') == None
 
-''' Можно и так
+''' более понятный вариант
 def get_most_frequent_word(text: str) -> str:
     if re.match('^[a-zA-Z\s]*$', text):
         value_dict: dict[str, int] = dict.fromkeys(text.split(), 0)

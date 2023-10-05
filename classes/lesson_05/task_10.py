@@ -1,7 +1,8 @@
 # Напишите функцию filter_odd_numbers, которая принимает на вход список целых чисел и возвращает новый список,
 # состоящий из элементов первоначального, но без нечётных чисел.
+# * Старайтесь использовать аннотации
 
-def filter_odd_numbers(value):
+def filter_odd_numbers(value: list[int]) -> list[int]:
     return [i for i in value if i % 2 == 0]
 
 
