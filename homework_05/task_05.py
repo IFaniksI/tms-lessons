@@ -2,6 +2,7 @@
 # и возвращает самое часто встречающееся слово. Если таких слов несколько - верните любое.
 # · "hello this is a string with words and spaces and big big woooooooooord" -> "woooooooooord"
 # · "hello this is a string with words and spaces and big big woooooooooord and and and" -> "and"
+# * Старайтесь использовать аннотации
 
 import re
 
@@ -10,9 +11,9 @@ import re
 # ???????????????????????????????????????????????????????????????????????????????????????????????
 
 
-def get_most_frequent_word(text):
+def get_most_frequent_word(text: str) -> str:
     if re.match('^[a-zA-Z\s]*$', text):
-        result = text.split()
+        result: list[str] = text.split()
         return max(result, key=result.count)
 
 
@@ -21,9 +22,9 @@ assert get_most_frequent_word('hello this is a string with words and spaces and 
 assert get_most_frequent_word('как говорится так и говорится') == None
 
 ''' Можно и так
-def get_most_frequent_word(text):
+def get_most_frequent_word(text: str) -> str:
     if re.match('^[a-zA-Z\s]*$', text):
-        value_dict = dict.fromkeys(text.split(), 0)
+        value_dict: dict[str, int] = dict.fromkeys(text.split(), 0)
         for i in text.split():
             value_dict[i] += 1
         return max(value_dict, key=value_dict.get)

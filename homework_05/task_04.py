@@ -1,10 +1,11 @@
 # Напишите функцию get_longest_word, которая на вход принимает текст (только английские слова и пробелы),
 # и возвращает самое длинное слово из этого текста. Для разбиения строки на слова используйте функцию split.
+# * Старайтесь использовать аннотации
 
 import re
 
 
-def get_longest_word(text):
+def get_longest_word(text: str) -> str:
     if re.match('^[a-zA-Z\s]*$', text):
         return max(text.split(), key=len)
 
