@@ -10,7 +10,7 @@ def xor_cipher(string: str, key: int) -> str:
 
 xor_uncipher = xor_cipher
 assert xor_cipher("Hello world!", 2) == 'Jgnnm"umpnf#'
-assert xor_cipher('Jgnnm"umpnf#', 2) == "Hello world!"
+assert xor_uncipher('Jgnnm"umpnf#', 2) == "Hello world!"
 
 '''
 Объясняю логику
