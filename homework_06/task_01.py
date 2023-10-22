@@ -11,19 +11,19 @@
 input_list = input().split()
 
 
-def map_to_tuples_with_simple_cycle(value: list[str]) -> list[tuple]:
+def map_to_tuples_with_simple_cycle(chars: list[str]) -> list[tuple]:
     result = []
-    for element in value:
+    for element in chars:
         result.append((element.upper(), element.lower()))
     return result
 
 
-def map_to_tuples_with_generator(value: list[str]) -> list[tuple]:
-    return [(element.upper(), element.lower()) for element in value]
+def map_to_tuples_with_generator(chars: list[str]) -> list[tuple]:
+    return [(element.upper(), element.lower()) for element in chars]
 
 
-def map_to_tuples_with_map(value: list[str]) -> list[tuple]:
-    return list(map(lambda element: (element.upper(), element.lower()), value))
+def map_to_tuples_with_map(chars: list[str]) -> list[tuple]:
+    return list(map(lambda element: (element.upper(), element.lower()), chars))
 
 
 print(f'с помощью обычного цикла for: {map_to_tuples_with_simple_cycle(input_list)}')
