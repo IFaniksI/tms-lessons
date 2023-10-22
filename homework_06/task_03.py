@@ -27,4 +27,4 @@ def remove_vowels_with_filter(chars: list[str]) -> list[str]:
 
 print(f'с помощью обычного цикла for: {remove_vowels_with_simple_cycle(input_list)}')
 print(f'с помощью генератора списков: {remove_vowels_with_generator(input_list)}')
-print(f'с помощью функции map: {remove_vowels_with_filter(input_list)}')
+print(f'с помощью функции filter: {remove_vowels_with_filter(input_list)}')
