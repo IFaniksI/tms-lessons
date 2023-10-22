@@ -20,9 +20,9 @@ print(f'4.1 с помощью обычного цикла: {result}')
 print(f'4.1 с помощью функции reduce: {reduce(lambda element, value: element + value, input_list)}')
 
 # 4.2
-for i in input_list:
-    if i <= input_list[0]:
-        result = i
+for element in input_list:
+    if element <= input_list[0]:
+        result = element
 
 print(f'4.2 с помощью обычного цикла: {result}')
 print(f'4.2 с помощью функции reduce: {reduce(lambda element, value: min(element, value), input_list)}')
