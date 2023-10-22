@@ -11,7 +11,7 @@ input_list = input().split()
 vowels = ['a', 'e', 'i', 'o', 'u']
 
 
-def remove_vowels_with_simple_cycle(chars):
+def remove_vowels_with_simple_cycle(chars: list[str]) -> list[str]:
     result = []
     for element in chars:
         if element not in vowels:
@@ -19,11 +19,11 @@ def remove_vowels_with_simple_cycle(chars):
     return result
 
 
-def remove_vowels_with_generator(chars):
+def remove_vowels_with_generator(chars: list[str]) -> list[str]:
     return [element for element in chars if element not in vowels]
 
 
-def remove_vowels_with_filter(chars):
+def remove_vowels_with_filter(chars: list[str]) -> list[str]:
     return list(filter(lambda element: element not in vowels, chars))
 
 
