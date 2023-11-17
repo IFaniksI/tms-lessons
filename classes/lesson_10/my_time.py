@@ -79,3 +79,4 @@ if __name__ == '__main__':
     assert MyTime(5) > MyTime(3)
     assert MyTime(5) >= MyTime(3)
     assert MyTime(5) >= MyTime(5)
+
