@@ -1,5 +1,4 @@
-CREATE TABLE contact
-(
+CREATE TABLE contact (
     name VARCHAR PRIMARY KEY,
     phone_number VARCHAR
-)
+);
