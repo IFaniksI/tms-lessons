@@ -11,13 +11,6 @@
 import sqlite3
 
 
-def create_table():
-    with sqlite3.connect(DB_FILE) as connection:
-        connection.execute('CREATE TABLE IF NOT EXISTS contact'
-                           '(name VARCHAR PRIMARY KEY,'
-                           'phone_number VARCHAR)')
-
-
 def add_contact(name: str, phone_number: str):
     with sqlite3.connect(DB_FILE) as connection:
         connection.execute('INSERT INTO contact VALUES(?, ?)', (name, phone_number))
@@ -37,7 +30,6 @@ def update_contact(name: str, new_phone_number: str):
 
 def main():
     while True:
-        create_table()
         print('Выберите действие:\n'
               '0. Выйти из программы\n'
               '1. Добавить новый контакт\n'
