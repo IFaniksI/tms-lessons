@@ -13,7 +13,7 @@ import sqlite3
 
 def add_contact(name: str, phone_number: str):
     with sqlite3.connect(DB_FILE) as connection:
-        connection.execute('INSERT INTO contact VALUES(?, ?)', (name, phone_number))
+        connection.execute('INSERT INTO contact (name, phone_number) VALUES(?, ?)', (name, phone_number))
 
 
 def print_all_contacts():
