@@ -18,7 +18,7 @@ def add_contact(name: str, phone_number: str):
 
 def print_all_contacts():
     with sqlite3.connect(DB_FILE) as connection:
-        all_contact = connection.execute('SELECT * FROM contact')
+        all_contact = connection.execute('SELECT * FROM contact ORDER BY name')
         for name, phone_number in all_contact.fetchall():
             print(name, phone_number)
 
