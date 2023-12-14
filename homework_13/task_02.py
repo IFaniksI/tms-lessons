@@ -83,7 +83,7 @@ def load_accounts(file_name: str) -> list[BankAccount]:
     with sqlite3.connect(file_name) as connection:
         all_account = connection.execute('SELECT card_holder, money, account_number, card_number, id '
                                          'FROM bank_accounts')
-        return [BankAccount(**value_account) for value_account in all_account.fetchall()]
+        return [BankAccount(**data) for data in all_account.fetchall()]
 
 
 class Bank:
